@@ -1,0 +1,12 @@
+services:
+  rocket:
+    container_name: rocket
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: true
+    ports:
+      - 9000:9000
+    volumes:
+      - ./:/app
